@@ -1,3 +1,5 @@
+#source:
+#  branch: master
 build_rules:
   - id: allow-zero-findings
     finding_types:
@@ -10,3 +12,8 @@ build_rules:
       - SEVERITY_HIGH_IMPACT
       - SEVERITY_LOW_IMPACT
     threshold: 0
+  - id: reachable-oss-vuln
+    finding_types: [oss_vuln]
+    options:
+      reachable: true
+      num_findings: 10
